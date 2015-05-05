@@ -1,0 +1,36 @@
+{
+  "name": "confur-frontend",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/confur-me/confur-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/confur-me/confur-frontend/issues"
+  },
+  "homepage": "https://github.com/confur-me/confur-frontend",
+  "dependencies": {
+    "events": "^1.0.2",
+    "flux": "^2.0.3",
+    "page": "^1.6.3",
+    "react": "^0.13.2",
+    "superagent": "^1.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "babel-core": "^5.2.15",
+    "babel-loader": "^5.0.0",
+    "csswring": "^3.0.4",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
