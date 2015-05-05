@@ -1,13 +1,16 @@
 var webpack = require('webpack');
-var path = require('path');
 
 module.exports = {
   entry: {
-    app: ['webpack/hot/dev-server', './app.jsx']
+    app: [
+      'webpack/hot/dev-server',
+      './app.jsx'
+    ]
   },
   output: {
-    path: path.resolve('dest'),
-    filename: 'app.jsx'
+    path: './dest/',
+    publicPath: '/dest/',
+    filename: 'app.js'
   },
   module: {
     loaders: [
