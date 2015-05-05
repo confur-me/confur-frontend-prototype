@@ -2,10 +2,12 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './app.jsx',
+  entry: {
+    app: ['webpack/hot/dev-server', './app.jsx']
+  },
   output: {
     path: path.resolve('dest'),
-    filename: 'app.js'
+    filename: 'app.jsx'
   },
   module: {
     loaders: [
