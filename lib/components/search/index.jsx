@@ -6,11 +6,10 @@
 import React from 'react';
 import autobind from 'autobind-decorator';
 
-
 export default class Search extends React.Component {
 
   state = {
-    query: ""
+    query: ''
   }
 
   componentDidMount() {}

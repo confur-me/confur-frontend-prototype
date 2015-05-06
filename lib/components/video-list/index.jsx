@@ -4,16 +4,27 @@
  * dependencies
  */
 import React from 'react';
-
+import Item from './item';
 
 export default class Videolist extends React.Component {
 
-  state = { text: this.constructor.name }
+  state = {
+    videos: [
+      {
+        name: 'Hello World the Movie',
+        description: 'Yay, just description'
+      }
+    ]
+  }
 
   componentDidMount() {}
 
   render() {
-    return <p>{this.state.text}</p>;
+    return (
+      <ul className="c-video-list">
+        {this.state.videos.map(video => <Item video={video} />)}
+      </ul>
+    );
   }
 
 }
