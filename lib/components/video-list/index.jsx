@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * Dependencies
+ * dependencies
  */
 import React from 'react';
 
 
-export default class VideoList extends React.Component {
+export default class Videolist extends React.Component {
 
   state = { text: this.constructor.name }
 
