@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/confur-me/confur-frontend",
   "dependencies": {
+    "autobind-decorator": "^1.1.0",
     "events": "^1.0.2",
     "flux": "^2.0.3",
     "page": "^1.6.3",
