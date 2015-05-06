@@ -15,6 +15,7 @@
     "no-underscore-dangle": [0],
     "no-unused-expressions": false,
     "no-unused-vars": false,
+    "no-return-assign": false,
     "quotes": [2, "single"],
     "yoda": true,
   }
