@@ -1,8 +1,9 @@
 'use strict';
 
+import 'reset.css';
+import 'app.css';
 import page from 'page';
 import React from 'react';
-// import Hello from 'components/hello';
 import Search from 'components/search';
 import VideoList from 'components/video-list';
 
@@ -11,8 +12,6 @@ import VideoList from 'components/video-list';
  *  @type {DOMElement}
  */
 const root = document.getElementById('root');
-
-// page('/', '/feed');
 
 page('/', ctx => {
   React.render(

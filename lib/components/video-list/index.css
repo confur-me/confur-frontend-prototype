@@ -1,3 +1,16 @@
 .c-video-list {
 
 }
+
+.c-video-list-item {
+}
+
+.c-video-item {
+  width: 320px;
+  height: 210px;
+  background-color: black;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  clear: both;
+}
