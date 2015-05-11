@@ -30,7 +30,10 @@
     "autoprefixer-core": "^5.1.11",
     "babel-core": "^5.2.15",
     "babel-loader": "^5.0.0",
+    "css-loader": "^0.12.0",
     "csswring": "^3.0.4",
+    "postcss-loader": "^0.4.3",
+    "style-loader": "^0.12.2",
     "webpack": "^1.8.11",
     "webpack-dev-server": "^1.8.2"
   }
