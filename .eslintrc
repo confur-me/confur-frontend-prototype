@@ -10,6 +10,7 @@
   },
   // To give you an idea how to override rule options:
   "rules": {
+    "curly": false,
     "eol-last": [0],
     "no-mixed-requires": [0],
     "no-underscore-dangle": [0],
