@@ -6,38 +6,27 @@
 import './index.css';
 import React from 'react';
 import Item from './item';
+import store from 'stores/video';
+import * as actions from 'actions/video';
 
 export default class Videolist extends React.Component {
 
   state = {
-    videos: [
-      {
-        name: 'Hello World the Movie',
-        description: 'Yay, just description',
-        tags: [
-          'react',
-          'javascript',
-          'es6'
-        ]
-      },
-      {
-        name: 'Hello World the Movie',
-        description: 'Yay, just description',
-        tags: [
-          'react',
-          'javascript',
-          'es6'
-        ]
-      }
-    ]
+    conferences: []
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    store.on('change', (data) => {
+      this.setState({ conferences: store.get() });
+    });
+    actions.get();
+  }
 
   render() {
+    let conferences = this.state.conferences;
     return (
       <ul className="c-video-list">
-        {this.state.videos.map(video => <Item video={video} />)}
+        {conferences.map(conference => <pre>{JSON.stringify(conference)}</pre>)}
       </ul>
     );
   }
