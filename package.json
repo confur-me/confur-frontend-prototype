@@ -4,7 +4,7 @@
   "description": "Confur frontend",
   "main": "app.jsx",
   "scripts": {
-    "start": "webpack-dev-server --hot",
+    "start": "webpack-dev-server --hot --port 8083",
     "build": "webpack",
     "test": "mocha test"
   },
