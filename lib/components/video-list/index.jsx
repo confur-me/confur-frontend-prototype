@@ -3,32 +3,32 @@
 /**
  * dependencies
  */
-import './index.css';
 import React from 'react';
-import Item from './item';
-import store from 'stores/video';
-import * as actions from 'actions/video';
+// import Item from './item';
+import store from 'stores/videos';
+import * as actions from 'actions/videos';
 
-export default class Videolist extends React.Component {
+export default class VideoList extends React.Component {
 
-  state = {
-    conferences: []
-  }
+  state = { videos: [] }
 
   componentDidMount() {
-    store.on('change', (data) => {
-      this.setState({ conferences: store.get() });
+    store.on('change', data => {
+      const videos = store.get();
+      this.setState({ videos });
     });
-    actions.get();
+    actions.getPage(this.props.page || 1);
   }
 
   render() {
-    let conferences = this.state.conferences;
+    const videos = this.state.videos;
     return (
-      <ul className="c-video-list">
-        {conferences.map(conference => <pre>{JSON.stringify(conference)}</pre>)}
-      </ul>
+      <div>
+        {videos.map((video, key) => <pre key={key}>{JSON.stringify(video)}</pre>)}
+      </div>
     );
   }
 
 }
+
+

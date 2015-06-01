@@ -13,14 +13,7 @@ import VideoList from 'components/video-list';
  */
 const root = document.getElementById('root');
 
-page('/', ctx => {
-  React.render(
-    <div>
-      <Search/>
-      <VideoList/>
-    </div>
-  , root);
-});
+page('/:page(\\d+)?', ctx => React.render(<VideoList page={ctx.params.page}/>, root));
 
 // Start router
 page();
